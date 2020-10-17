@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import axios from 'axios'
+import Aside from './components/Aside.js'
+import Footer from './components/Footer.js'
+import Header from './components/Header.js'
+import Main from './components/Main.js'
+import Nav from './components/Nav.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    listingss: []
+  }
+
+  componentDidMount = () => {}
+  getListings = () => {}
+  handleAdd = (event, formInputs) => {}
+  handleDelete = deletedListing => {}
+  handleUpdate = (event, formInputs) => {}
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          <Header />
+          <Aside handleSubmit={this.handleAdd} />
+          <Main
+            listings={this.state.listing}
+            handleDelete={this.handleDelete}
+            handleUpdate={this.handleUpdate}
+          />
+          <Nav />
+          <Footer />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
