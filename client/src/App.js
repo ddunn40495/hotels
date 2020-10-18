@@ -1,25 +1,28 @@
-import React from 'react'
-import axios from 'axios'
-import Aside from './components/Aside.js'
-import Footer from './components/Footer.js'
-import Header from './components/Header.js'
-import Main from './components/Main.js'
-import Nav from './components/Nav.js'
+import React from "react";
+import axios from "axios";
+import Aside from "./components/Aside.js";
+import Footer from "./components/Footer.js";
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Nav from "./components/Nav.js";
+import testData from "./data/data";
 
 class App extends React.Component {
   state = {
-    listings: []
-  }
+    listings: testData,
+  };
 
-  componentDidMount = () => {}
-  getListings = () => {}
-  handleAdd = (event, formInputs) => {}
-  handleDelete = deletedListing => {}
-  handleUpdate = (event, formInputs) => {}
+  componentDidMount = () => {
+    console.log(this.state.listings);
+  };
+  getListings = () => {};
+  handleAdd = (event, formInputs) => {};
+  handleDelete = (deletedListing) => {};
+  handleUpdate = (event, formInputs) => {};
   render() {
     return (
-      <div className="App">
-        <div className="container">
+      <div className='App'>
+        <div className='container'>
           <Header />
           <Aside handleSubmit={this.handleAdd} />
           <Main
@@ -31,7 +34,7 @@ class App extends React.Component {
           <Footer />
         </div>
       </div>
-    )
+    );
   }
 }
 
