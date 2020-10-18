@@ -23,7 +23,7 @@ class App extends React.Component {
           <Header />
           <Aside handleSubmit={this.handleAdd} />
           <Main
-            listings={this.state.listing}
+            listings={this.state.listings}
             handleDelete={this.handleDelete}
             handleUpdate={this.handleUpdate}
           />
