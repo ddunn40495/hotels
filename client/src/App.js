@@ -8,7 +8,7 @@ import Nav from './components/Nav.js'
 
 class App extends React.Component {
   state = {
-    listingss: []
+    listings: []
   }
 
   componentDidMount = () => {}
