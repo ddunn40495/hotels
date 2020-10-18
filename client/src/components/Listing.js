@@ -1,19 +1,35 @@
-import React from 'react'
 
-export default function Listing(props) {
-  return (
-    <div className="more-info">
-      <h2>Listing</h2>
-      <p>
-        Cupcake ipsum dolor sit amet sesame snaps soufflé. Halvah tootsie roll
-        gummi bears caramels dragée carrot cake I love. Cupcake jujubes powder
-        lollipop icing pie bonbon I love. Jujubes sweet roll tart.
-      </p>
-      <p>
-        Fruitcake I love toffee cake powder danish donut fruitcake croissant.
-        Marzipan I love pie tiramisu jelly-o cotton candy toffee halvah. Cake
-        liquorice cake marshmallow. Gummies cheesecake dragée.
-      </p>
-    </div>
-  )
+import React from 'react'
+import Form from './Form.js'
+
+class Listing extends React.Component {
+  state = {
+    formVisible: false
+  }
+
+  toggleForm = () => this.setState({ formVisible: !this.state.formVisible })
+
+  render() {
+    const { listing, handleDelete, handleUpdate } = this.props
+    return (
+      <>
+        <div className="listing">
+          <h3>
+            <span> {listing.address}</span> <span>{listing.city}</span>
+          </h3>
+          <div className="listing-actions">
+            <button onClick={this.toggleForm}>Edit</button>
+            <button
+              className="delete-button"
+              onClick={() => handleDelete(listing)}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      </>
+    )
+  }
 }
+
+export default Listing
