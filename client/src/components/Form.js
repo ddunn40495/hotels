@@ -22,7 +22,7 @@ class Form extends Component {
       name: '',
       age: ''
     })
-    if (this.props.person) {
+    if (this.props.listing) {
       this.props.toggleForm()
     }
   }
@@ -49,7 +49,7 @@ class Form extends Component {
         />
         <input
           type="submit"
-          value={this.props.person ? 'update this person' : 'add a person'}
+          value={this.props.listing ? 'update this listing' : 'add a listing'}
         />
         {this.props.children}
       </form>
