@@ -14,9 +14,9 @@ export default function Header(props) {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
         <NavDropdown title="Add new Listing" id="basic-nav-dropdown">
-          <NavDropdown.Item>
+        
             <Form handleSubmit={props.handleSubmit}/>
-              </NavDropdown.Item>
+
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
