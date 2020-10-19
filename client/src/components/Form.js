@@ -100,6 +100,10 @@ class Form extends Component {
           value={this.state.available}
           id={'available'}
         />
+        <select
+        value={this.state.category}>
+
+        </select>
         <Input
           handleChange={this.handleChange}
           name={'category'}
