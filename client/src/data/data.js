@@ -2,9 +2,9 @@ const testData = [
   {
     listing_id: 1,
     address: 78728,
-    city: null,
-    state: null,
-    zip: null,
+    city: "test city",
+    state: "test state",
+    zip: 55555,
     rent: 1000,
     pic:
       "https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png",
