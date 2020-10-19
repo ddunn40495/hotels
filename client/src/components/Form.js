@@ -60,7 +60,7 @@ class Form extends Component {
           name={'city'}
           placeholder={'City'}
           title={'City'}
-          type={'number'}
+          type={'text'}
           value={this.state.city}
           id={'city'}
         />
@@ -96,7 +96,7 @@ class Form extends Component {
           name={'available'}
           placeholder={'Available'}
           title={'Available'}
-          type={'text'}
+          type={'boolean'}
           value={this.state.available}
           id={'available'}
         />

@@ -15,7 +15,7 @@ class Listing extends React.Component {
       <>
         <div className="listing">
           <h3>
-            <span> {listing.address}</span> <span>{listing.city}</span>
+            <img src={listing.pic} /><span> Address: {listing.address} {listing.city}, {listing.state} {listing.zip} </span><span>Monthly cost: {listing.rent} </span><span></span><span>category: {listing.category}</span>
           </h3>
           <div className="listing-actions">
             <button onClick={this.toggleForm}>Edit</button>
