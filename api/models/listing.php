@@ -34,7 +34,6 @@ class Listing {
     public $available;
     public $category;
 
-
     public function __construct($listing_id, $address, $city, $state, $zip, $rent, $pic, $available, $category) {
         $this->listing_id  = $listing_id;
         $this->address = $address;
@@ -77,7 +76,7 @@ class Listings {
     }
 
     static function create($listing){
-        $query = "INSERT INTO listing (address, city, state, zip, rent, pic, available, category) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)";
+        $query = "INSERT INTO listings (address, city, state, zip, rent, pic, available, category) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)";
         $query_params = array($listing->address, $listing->city, $listing->state, $listing->zip, $listing->rent, $listing->pic, $listing->available, $listing->category);
         pg_query_params($query, $query_params);
         return self::all();
@@ -88,6 +87,8 @@ class Listings {
 
         $results = pg_query("SELECT * FROM listings ORDER BY listing_id ASC");
         $row_object = pg_fetch_object($results);
+
+        // var_dump($row_object);
 
         while($row_object !== false){
 
@@ -102,13 +103,14 @@ class Listings {
                 $row_object->available,
                 $row_object->category
             );
+           
 
             $listings[] = $new_listing;
 
             $row_object = pg_fetch_object($results);
         }
 
-   
+        // var_dump($listings);
 
         return $listings;
     }
