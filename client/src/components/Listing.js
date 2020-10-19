@@ -19,7 +19,7 @@ class Listing extends React.Component {
             <Card.Body>
               <Card.Text>
               category: {listing.category} <br />
-                {listing.address} <br />
+                Address: {listing.address} <br />
                 {listing.city}, {listing.state} {listing.zip} <br />
                 Monthly cost: {listing.rent}
               </Card.Text>
