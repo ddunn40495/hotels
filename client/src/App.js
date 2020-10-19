@@ -23,8 +23,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <div className='container'>
-          <Header />
-          <Aside handleSubmit={this.handleAdd} />
+          <Header handleSubmit={this.handleAdd} />
           <Main
             listings={this.state.listings}
             handleDelete={this.handleDelete}

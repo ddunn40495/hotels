@@ -78,7 +78,7 @@ class Form extends Component {
           name={'zip'}
           placeholder={'Zip'}
           title={'Zip'}
-          type={'text'}
+          type={'number'}
           value={this.state.zip}
           id={'zip'}
         />
@@ -96,14 +96,14 @@ class Form extends Component {
           name={'available'}
           placeholder={'Available'}
           title={'Available'}
-          type={'boolean'}
+          type={'text'}
           value={this.state.available}
           id={'available'}
         />
         <Input
           handleChange={this.handleChange}
           name={'category'}
-          placeholder={'Category'}
+          placeholder={'House/apartment'}
           title={'Category'}
           type={'text'}
           value={this.state.category}
