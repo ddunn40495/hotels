@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import Aside from "./components/Aside.js";
 import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
 import Main from "./components/Main.js";
