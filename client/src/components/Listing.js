@@ -15,6 +15,7 @@ class Listing extends React.Component {
     const { listing, handleDelete, handleUpdate } = this.props
     return (
       <>
+      <Card>
           <Card.Img variant="top" src={listing.pic} />
             <Card.Body>
               <Card.Text>
@@ -26,6 +27,7 @@ class Listing extends React.Component {
               <Button variant="primary" onClick={this.toggleForm}>Edit</Button>
               <Button variant="primary" onClick={() => handleDelete(listing)}>Delete</Button>
             </Card.Body>
+            </Card>
       </>
     )
   }
