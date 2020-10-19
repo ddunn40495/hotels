@@ -1,27 +1,4 @@
 <?php
-$dbconn = pg_connect("host=localhost port=5432 dbname=rentals user=postgres password=braves1995");
-
-
-
-// $dbconn = null;
-// if(getenv(‘DATABASE_URL’)){
-// 	$connectionConfig = parse_url(getenv(‘DATABASE_URL’));
-// 	$host = $connectionConfig[‘host’];
-// 	$user = $connectionConfig[‘user’];
-// 	$password = $connectionConfig[‘pass’];
-// 	$port = $connectionConfig[‘port’];
-// 	$dbname = trim($connectionConfig[‘path’],‘/’);
-// 	$dbconn = pg_connect(
-// 		“host=“.$host.” “.
-// 		“user=“.$user.” “.
-// 		“password=“.$password.” “.
-// 		“port=“.$port.” “.
-// 		“dbname=“.$dbname
-// 	);
-// } else {
-// 	$dbconn = pg_connect(“host=localhost dbname=reviews”);
-// }
-
 
 class Listing {
     public $listing_id;
@@ -70,7 +47,7 @@ class Listings {
         $updated_listing->rent,
         $updated_listing->pic,
         $updated_listing->available,
-        $updated_listing->category, 
+        $updated_listing->category,
         $updated_listing->listing_id);
         pg_query_params($query, $query_params);
         return self::all();
@@ -108,7 +85,7 @@ class Listings {
             $row_object = pg_fetch_object($results);
         }
 
-   
+
 
         return $listings;
     }

@@ -1,6 +1,8 @@
 
-import React from 'react'
-import Form from './Form.js'
+import React from 'react';
+import Form from './Form.js';
+import {Card} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 class Listing extends React.Component {
   state = {
@@ -13,20 +15,19 @@ class Listing extends React.Component {
     const { listing, handleDelete, handleUpdate } = this.props
     return (
       <>
-        <div className="listing">
-          <h3>
-            <span> {listing.address}</span> <span>{listing.city}</span>
-          </h3>
-          <div className="listing-actions">
-            <button onClick={this.toggleForm}>Edit</button>
-            <button
-              className="delete-button"
-              onClick={() => handleDelete(listing)}
-            >
-              X
-            </button>
-          </div>
-        </div>
+        <Card style={{ width: '23rem'}}>
+          <Card.Img variant="top" src={listing.pic} />
+            <Card.Body>
+              <Card.Text>
+              category: {listing.category} <br />
+                {listing.address} <br />
+                {listing.city}, {listing.state} {listing.zip} <br />
+                Monthly cost: {listing.rent}
+              </Card.Text>
+              <Button variant="primary" onClick={this.toggleForm}>Edit</Button>
+              <Button variant="primary" onClick={() => handleDelete(listing)}>Delete</Button>
+            </Card.Body>
+        </Card>        
       </>
     )
   }
