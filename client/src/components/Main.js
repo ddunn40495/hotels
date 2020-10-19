@@ -2,11 +2,11 @@ import React from 'react'
 import Listings from './Listings.js'
 
 function Main(props) {
-  const { people, handleDelete, handleUpdate } = props
+  const { listings, handleDelete, handleUpdate } = props
     return (
       <main>
         <Listings
-         people={people}
+         listings={listings}
          handleDelete={handleDelete}
          handleUpdate={handleUpdate}
         />

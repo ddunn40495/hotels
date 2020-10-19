@@ -1,19 +1,36 @@
-import React from 'react'
 
-export default function Listing(props) {
-  return (
-    <div className="more-info">
-      <h2>Listing</h2>
-      <p>
-        Cupcake ipsum dolor sit amet sesame snaps soufflé. Halvah tootsie roll
-        gummi bears caramels dragée carrot cake I love. Cupcake jujubes powder
-        lollipop icing pie bonbon I love. Jujubes sweet roll tart.
-      </p>
-      <p>
-        Fruitcake I love toffee cake powder danish donut fruitcake croissant.
-        Marzipan I love pie tiramisu jelly-o cotton candy toffee halvah. Cake
-        liquorice cake marshmallow. Gummies cheesecake dragée.
-      </p>
-    </div>
-  )
+import React from 'react';
+import Form from './Form.js';
+import {Card} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+
+class Listing extends React.Component {
+  state = {
+    formVisible: false
+  }
+
+  toggleForm = () => this.setState({ formVisible: !this.state.formVisible })
+
+  render() {
+    const { listing, handleDelete, handleUpdate } = this.props
+    return (
+      <>
+        <Card style={{ width: '23rem'}}>
+          <Card.Img variant="top" src={listing.pic} />
+            <Card.Body>
+              <Card.Text>
+              category: {listing.category} <br />
+                {listing.address} <br />
+                {listing.city}, {listing.state} {listing.zip} <br />
+                Monthly cost: {listing.rent}
+              </Card.Text>
+              <Button variant="primary" onClick={this.toggleForm}>Edit</Button>
+              <Button variant="primary" onClick={() => handleDelete(listing)}>Delete</Button>
+            </Card.Body>
+        </Card>        
+      </>
+    )
+  }
 }
+
+export default Listing
