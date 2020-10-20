@@ -15,17 +15,19 @@ class Listing extends React.Component {
     const { listing, handleDelete, handleUpdate } = this.props
     return (
       <>
+      <Card>
           <Card.Img variant="top" src={listing.pic} />
             <Card.Body>
               <Card.Text>
               category: {listing.category} <br />
-                {listing.address} <br />
+                Address: {listing.address} <br />
                 {listing.city}, {listing.state} {listing.zip} <br />
                 Monthly cost: {listing.rent}
               </Card.Text>
-              <Button variant="primary" onClick={this.toggleForm}>Edit</Button>
+              <Button style={{ margin: '5px' }}variant="primary" onClick={this.toggleForm}>Edit</Button>
               <Button variant="primary" onClick={() => handleDelete(listing)}>Delete</Button>
             </Card.Body>
+            </Card>
       </>
     )
   }
