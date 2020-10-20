@@ -24,7 +24,7 @@ class Listing extends React.Component {
                 {listing.city}, {listing.state} {listing.zip} <br />
                 Monthly cost: {listing.rent}
               </Card.Text>
-              <Button variant="primary" onClick={this.toggleForm}>Edit</Button>
+              <Button style={{ margin: '5px' }}variant="primary" onClick={this.toggleForm}>Edit</Button>
               <Button variant="primary" onClick={() => handleDelete(listing)}>Delete</Button>
             </Card.Body>
             </Card>
