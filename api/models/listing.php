@@ -88,7 +88,7 @@ class Listings {
         $results = pg_query("SELECT * FROM listings ORDER BY id ASC");
         $row_object = pg_fetch_object($results);
 
-        var_dump($row_object);
+        // var_dump($row_object);
 
         while($row_object !== false){
 
@@ -100,7 +100,7 @@ class Listings {
                 intval($row_object->zip),
                 intval($row_object->rent),
                 $row_object->pic,
-                $row_object->available,
+                boolval($row_object->available),
                 $row_object->category
             );
            
@@ -110,7 +110,7 @@ class Listings {
             $row_object = pg_fetch_object($results);
         }
 
-        var_dump($listings);
+        // var_dump($listings);
 
         return $listings;
     }
