@@ -27,7 +27,6 @@ class App extends React.Component {
             handleDelete={this.handleDelete}
             handleUpdate={this.handleUpdate}
           />
-          <Footer />
         </div>
       </div>
     );
