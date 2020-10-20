@@ -11,10 +11,22 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
-    console.log(this.state.listings);
+    // axios.get("http://rentals.local/rent").then((response) => {
+    //   this.setState({
+    //     listings: response.data,
+    //   });
+    // });
   };
   getListings = () => {};
-  handleAdd = (event, formInputs) => {};
+  handleAdd = (event, formInputs) => {
+    axios
+      .post("/people", formInputs)
+      .then(
+        (response) => this.setState({ people: response.data }),
+        (err) => console.error(err)
+      )
+      .catch((error) => console.error(error));
+  };
   handleDelete = (deletedListing) => {};
   handleUpdate = (event, formInputs) => {};
   render() {

@@ -1,0 +1,62 @@
+CREATE TABLE
+  listings
+  ( id serial, address text, city text, state text, zip int, rent int, pic text, available BOOLEAN DEFAULT true, category text);
+
+INSERT INTO
+  listings ( address, city, state, zip, rent, pic, available, category )
+VALUES
+  ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_11q44/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' ),
+      ( '170 Heartfelt Lane', 'Austin', 'TX', 78728, 1200, 'https://16b4xb3m2i8y3oxuu2aw0wmx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/pasted-image-0-6.png', true, 'house' ),
+    ( '250 BrickStone Drive', 'Austin', 'TX', 78728, 1100, 'https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_525,w_1144/v1/maac/-/media/images/properties/texas/austin/post-barton/slides/2postbartoncreek_parkingexterior5-min.jpg', true, 'townhome' ),
+    ( '390 SuperStar Lane', 'Austin', 'TX', 78728, 4000, 'https://luxport-dev.s3.amazonaws.com/89681/824e4696-e-1-EXT.jpg', true, 'manison' ),
+    ( '420 Mellowcreek Road', 'Austin', 'TX', 78728, 2500, 'https://cdn.vox-cdn.com/thumbor/If1p049ojB-ZhRa6C2_-J1O1Dos=/0x0:634x357/1200x900/filters:focal(267x129:367x229):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62569418/5_Fifty_five.0.0.jpg', true, 'condo' );
+
+
+    SELECT * FROM listings WHERE id = 3;
